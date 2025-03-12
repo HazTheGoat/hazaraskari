@@ -1,1 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 /* You can add global styles to this file, and also import other style files */
+
+@theme {
+  --color-cv-bg: #03101b;
+}
+
+.html,
+body {
+  background-color: var(--color-cv-bg);
+  color: #fff;
+  @apply font-poppins;
+}
+
+@keyframes neon-flash {
+  0% {
+    background-color: #ffff33;
+  } /* Neon Yellow */
+  16% {
+    background-color: #ff10f0;
+  } /* Neon Pink */
+  33% {
+    background-color: #ff5f1f;
+  } /* Neon Orange */
+  50% {
+    background-color: #00ffff;
+  } /* Neon Cyan */
+  66% {
+    background-color: #1f51ff;
+  } /* Neon Blue */
+  83% {
+    background-color: #39ff14;
+  } /* Neon Green */
+  100% {
+    background-color: #ffff33;
+  } /* Back to Neon Yellow */
+}
+
+.neon-div {
+  animation: neon-flash 10s infinite alternate;
+}
