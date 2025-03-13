@@ -64,7 +64,7 @@ export function App() {
                       <span className="font-bold underline text-fuchsia-500">
                         Architecture
                       </span>
-                      ,Responsive Web Design, Mobile Web Design,
+                      , Responsive Web Design, Mobile Web Design,{' '}
                       <span className="font-bold underline text-red-500">
                         Scaleability
                       </span>
