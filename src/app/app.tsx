@@ -766,13 +766,6 @@ export function App() {
                     paragraph: (
                       <>
                         <p>
-                          Creates timesaving AI + No/low-code fullstack apps
-                          (20+ years pro-code experience) Certified Appfarm, MS
-                          Power Platform, Make.com «Code when you need it, UI
-                          when you dont»
-                        </p>
-                        <br />
-                        <p>
                           Hazar is an exceptional consultant—the kind that truly
                           embodies what it means to be a top-tier professional.
                           He's not only highly skilled in his craft, but he also
