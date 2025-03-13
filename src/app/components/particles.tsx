@@ -87,7 +87,7 @@ export const Animation = () => {
               },
               modes: {
                 repulse: {
-                  distance: 100,
+                  distance: 40,
                   duration: 1,
                 },
                 push: {
