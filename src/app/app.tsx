@@ -5,8 +5,17 @@ import { ExternalLink } from 'lucide-react';
 import { FileDown } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { Animation } from './components/particles';
+import TagManager from 'react-gtm-module';
 
+import { useEffect } from 'react';
 export function App() {
+  useEffect(() => {
+    const tagManagerArgs = {
+      gtmId: 'GTM-5R73NZ4F',
+    };
+    TagManager.initialize(tagManagerArgs);
+  }, []);
+
   return (
     <div>
       <div className="wrapper bg-[#03101B]" style={{ position: 'relative' }}>
@@ -16,7 +25,10 @@ export function App() {
         >
           <div className="col-span-4 max-w-6/12">
             <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
-              <a className="bg-[#03101B] text-sm" href="">
+              <a
+                className="bg-[#03101B] text-sm"
+                href="./../assets/Hazar_Askari_CV_March_2025.pdf"
+              >
                 Download CV <FileDown className="inline" />
               </a>
             </div>
