@@ -23,9 +23,9 @@ export function App() {
           </div>
         </div>
 
-        <div className="container mx-auto text-2xl py-20">
-          <div className="grid grid-cols-6 gap-40">
-            <div className="col-span-2">
+        <div className="container mx-auto text-2xl md:py-20 px-8 md:px-0">
+          <div className="grid grid-cols-1 md:grid-cols-6 gap-8 md:gap-40">
+            <div className="md:col-span-2 col-span-1">
               <div className="mb-20 rounded-full neon-div relative">
                 <Animation />
 
@@ -96,27 +96,30 @@ export function App() {
                   }
                 />
               </div>
-              <Experience
-                title={'Languages'}
-                paragraph={
-                  <>
-                    <p>
-                      Norwegian: <span className="text-green-600">Fluent</span>
-                    </p>
-                    <p>
-                      English: <span className="text-green-600">Fluent</span>
-                    </p>
-                    <p>
-                      Kurdish: <span className="text-green-600">Fluent</span>
-                    </p>
-                    <p>
-                      Arabic: <span className="text-yellow-600">Basic</span>
-                    </p>
-                  </>
-                }
-              />
+              <div className="mb-20">
+                <Experience
+                  title={'Languages'}
+                  paragraph={
+                    <>
+                      <p>
+                        Norwegian:{' '}
+                        <span className="text-green-600">Fluent</span>
+                      </p>
+                      <p>
+                        English: <span className="text-green-600">Fluent</span>
+                      </p>
+                      <p>
+                        Kurdish: <span className="text-green-600">Fluent</span>
+                      </p>
+                      <p>
+                        Arabic: <span className="text-yellow-600">Basic</span>
+                      </p>
+                    </>
+                  }
+                />
+              </div>
             </div>
-            <div className="col-span-4 max-w-6/12">
+            <div className="md:col-span-4 col-span-1 max-w-6/12">
               <div className="mb-40">
                 <IntroSection />
               </div>
@@ -577,17 +580,17 @@ export function App() {
           </div>
         </div>
         <div
-          className="container mx-auto text-2xl py-20"
+          className="container mx-auto text-2xl py-8 md:py-20 px-8 md:px-0"
           style={{ position: 'relative' }}
         >
-          <div className="grid grid-cols-8 gap-4">
-            <div className="col-span-6 col-start-3">
+          <div className="grid grid-cols-1 md:grid-cols-8 gap-4">
+            <div className="col-span-6 md:col-start-3">
               <motion.div
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1.5 }}
                 viewport={{ once: true }}
-                className="grid grid-cols-6 gap-20"
+                className="grid grid-cols-1 md:grid-cols-6 gap-4 md:gap-20 mb-40 md:mb-80"
               >
                 <Avatar
                   {...{
@@ -624,7 +627,7 @@ export function App() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1.5 }}
                 viewport={{ once: true }}
-                className="grid grid-cols-6 gap-20"
+                className="grid grid-cols-1 md:grid-cols-6 gap-4 md:gap-20 mb-40 md:mb-80"
               >
                 <Avatar
                   {...{
@@ -660,7 +663,7 @@ export function App() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1.5 }}
                 viewport={{ once: true }}
-                className="grid grid-cols-6 gap-20"
+                className="grid grid-cols-1 md:grid-cols-6 gap-4 md:gap-20 mb-40 md:mb-80"
               >
                 <Avatar
                   {...{
@@ -691,7 +694,7 @@ export function App() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1.5 }}
                 viewport={{ once: true }}
-                className="grid grid-cols-6 gap-20"
+                className="grid grid-cols-1 md:grid-cols-6 gap-4 md:gap-20 mb-40 md:mb-80"
               >
                 <Avatar
                   {...{
@@ -725,7 +728,7 @@ export function App() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1.5 }}
                 viewport={{ once: true }}
-                className="grid grid-cols-6 gap-20"
+                className="grid grid-cols-1 md:grid-cols-6 gap-4 md:gap-20 mb-40 md:mb-80"
               >
                 <Avatar
                   {...{

@@ -9,7 +9,7 @@ type Props = {
 export const Avatar = ({ title, subtitle, imgSrc, paragraph }: Props) => {
   return (
     <>
-      <div className="col-span-2 text-right mb-80">
+      <div className="col-span-2 text-right">
         <img
           src={imgSrc}
           className="inline-block size-100 rounded-full"

@@ -2,7 +2,7 @@ export const IntroSection = () => {
   return (
     <>
       <div className="mb-20">
-        <h1 className="text-8xl font-bold mb-2">Hazar Askari</h1>
+        <h1 className="text-4xl md:text-8xl font-bold mb-2">Hazar Askari</h1>
         <p className="text-2xl">
           Experienced JavaScript Engineer with 10+ Years Expertise | Front-end
           Architect | Tech Speaker and Trainer Extraordinaire | Empowering
