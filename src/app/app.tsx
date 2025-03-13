@@ -28,6 +28,7 @@ export function App() {
               <a
                 className="bg-[#03101B] text-sm"
                 href="./../assets/Hazar_Askari_CV_March_2025.pdf"
+                download
               >
                 Download CV <FileDown className="inline" />
               </a>
