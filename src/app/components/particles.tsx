@@ -28,7 +28,7 @@ export const Animation = () => {
           },
           particles: {
             number: {
-              value: 250, // number of particles
+              value: 650, // number of particles
               density: {
                 enable: true,
                 height: 400,
@@ -40,7 +40,7 @@ export const Animation = () => {
             },
             links: {
               enable: true,
-              distance: 50, // distance between particles
+              distance: 20, // distance between particles
               color: '#39FF14', // color of lines
               opacity: 1,
               width: 1,
