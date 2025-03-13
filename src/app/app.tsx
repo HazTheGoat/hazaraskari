@@ -323,6 +323,7 @@ export function App() {
               <motion.div
                 className="mb-80"
                 initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1.5 }}
                 viewport={{ once: true }}
               >
@@ -333,7 +334,7 @@ export function App() {
                     subtitle: 'January 2021 - March 2022 (1 year 3 months)',
                     jobTitle: 'Front End Architect Consultant',
                     paragraph: (
-                      <div>
+                      <>
                         <p>
                           Initially served as the sole front-end developer,
                           designing and implementing the foundational user
@@ -351,7 +352,7 @@ export function App() {
                           cohesive and scalable solutions that enhanced user
                           experience.
                         </p>
-                      </div>
+                      </>
                     ),
                   }}
                 />
