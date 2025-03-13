@@ -43,7 +43,7 @@ export const Animation = () => {
             },
             line_linked: {
               enable: true,
-              distance: 30, // distance between particles
+              distance: 50, // distance between particles
               color: '#39FF14', // color of lines
               opacity: 1,
               width: 1,
