@@ -14,12 +14,11 @@
     "dependencies": {
         "@fontsource/poppins": "^5.2.5",
         "@tsparticles/engine": "^3.8.1",
+        "@tsparticles/react": "^3.0.0",
         "@tsparticles/slim": "^3.8.1",
         "lucide-react": "^0.479.0",
         "react": "19.0.0",
-        "react-dom": "19.0.0",
-        "riot-particles": "^2.9.3",
-        "tsparticles-engine": "^2.12.0"
+        "react-dom": "19.0.0"
     },
     "devDependencies": {
         "@babel/core": "^7.14.5",
@@ -62,13 +61,12 @@
         "postcss": "8.4.38",
         "prettier": "^2.6.2",
         "react-refresh": "^0.10.0",
-        "react-tsparticles": "^2.12.2",
         "tailwindcss": "3.4.3",
         "three": "^0.174.0",
         "ts-jest": "^29.1.0",
         "ts-node": "10.9.1",
         "tslib": "^2.3.0",
-        "tsparticles": "2.1.0",
+        "tsparticles": "^3.8.1",
         "typescript": "~5.7.2",
         "typescript-eslint": "^8.19.0",
         "webpack-cli": "^5.1.4"

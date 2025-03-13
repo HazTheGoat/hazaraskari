@@ -1,35 +1,27 @@
-import Particles from 'react-tsparticles';
-
-import { loadFull } from 'tsparticles';
+import { useEffect, useState } from 'react';
+import Particles, { initParticlesEngine } from '@tsparticles/react';
+import { loadSlim } from '@tsparticles/slim';
+import type { Engine } from '@tsparticles/engine';
 
 export const Animation = () => {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const particlesInit = async (main: any) => {
-    console.log(main);
-    await loadFull(main);
-  };
+  const [init, setInit] = useState(false);
+
+  useEffect(() => {
+    initParticlesEngine(async (engine: Engine) => {
+      await loadSlim(engine);
+    }).then(() => {
+      setInit(true);
+    });
+  }, []);
 
   const particlesLoaded = async (container: any) => {
     console.log(container);
   };
 
-  return (
-    <div
-      id="particles-js"
-      style={{ position: 'absolute', top: 0, left: 0, bottom: 0, right: 0 }}
-    >
+  if (init) {
+    return (
       <Particles
-        id="tsparticles"
-        init={particlesInit}
-        loaded={particlesLoaded}
-        style={{
-          top: 0,
-          left: 0,
-          bottom: 0,
-          right: 0,
-          position: 'absolute',
-          zIndex: 0,
-        }}
+        particlesLoaded={particlesLoaded}
         options={{
           fullScreen: {
             enable: false,
@@ -37,11 +29,16 @@ export const Animation = () => {
           particles: {
             number: {
               value: 250, // number of particles
+              density: {
+                enable: true,
+                height: 400,
+                width: 400,
+              },
             },
             shape: {
               type: '',
             },
-            line_linked: {
+            links: {
               enable: true,
               distance: 50, // distance between particles
               color: '#39FF14', // color of lines
@@ -54,27 +51,33 @@ export const Animation = () => {
               direction: 'none',
               random: false,
               straight: false,
-              out_mode: 'out',
-              bounce: false,
+              outModes: {
+                default: 'out',
+              },
               attract: {
                 enable: false,
-                rotateX: 600,
-                rotateY: 1200,
+                rotate: {
+                  x: 600,
+                  y: 1200,
+                },
               },
             },
           },
           interactivity: {
-            detect_on: 'canvas',
+            detectsOn: 'canvas',
             events: {
-              onhover: {
+              onDiv: {
+                selectors: '#repulse-div',
+                mode: 'repulse',
+              },
+              onHover: {
                 enable: true,
                 mode: 'repulse',
               },
-              onclick: {
+              onClick: {
                 enable: false,
                 mode: 'push',
               },
-              resize: false,
             },
             modes: {
               repulse: {
@@ -92,6 +95,7 @@ export const Animation = () => {
           retina_detect: true,
         }}
       />
-    </div>
-  );
+    );
+  }
+  return null;
 };
