@@ -16,6 +16,16 @@ export function App() {
     TagManager.initialize(tagManagerArgs);
   }, []);
 
+  const mouseOver = () => {
+    const tagManagerArgs = {
+      dataLayer: {
+        event: 'easteregg',
+        button_id: 'easteregg',
+      },
+    };
+    TagManager.dataLayer(tagManagerArgs);
+  };
+
   return (
     <div>
       <div className="wrapper bg-[#03101B]" style={{ position: 'relative' }}>
@@ -39,7 +49,10 @@ export function App() {
         <div className="container mx-auto text-2xl md:py-20 px-8 md:px-0">
           <div className="grid grid-cols-1 md:grid-cols-6 gap-8 md:gap-40">
             <div className="md:col-span-2 col-span-1">
-              <div className="mb-20 rounded-full neon-div relative">
+              <div
+                className="mb-20 rounded-full neon-div relative"
+                onMouseEnter={mouseOver}
+              >
                 <Animation />
 
                 <img
